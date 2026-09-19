@@ -3,6 +3,13 @@
 返回 (passed: bool, violations: list[str])。
 """
 
+"""
+已知限制：
+  1. 句末标点后带引号（如 "你好。"）时，引号会被划入下一句，导致内容轻微错位。
+     当前实现只影响句子内容定位，不影响句数统计，暂不修复。
+  2. 省略号（……）不视为句末标点，含省略号的句子不会被切分。
+"""
+
 import re
 
 def validate_response(response: str, constraints: dict) -> tuple[bool, list[str]]:

@@ -216,3 +216,23 @@ def test_empty_words():
     passed, violations = validate_response(response, constraints)
     assert passed is False
     assert len(violations) > 0
+
+# ============ F 组：已知限制的回归测试 ============
+
+def test_quote_after_period():
+    """
+    已知限制：句末标点后带引号，内容会错位，但句数统计正确。
+    本测试用于锁定当前行为，未来如果修复，测试需要同步更新。
+    """
+    response = "妈妈说“我今晚要加班。”然后离开了。\n\n第二段第一句。第二段第二句。\n\n第三段第一句。第三段第二句。"
+    constraints = {"paragraph": {"num_paragraphs": 3, "sentences_per_paragraph": 2}}
+    passed, _ = validate_response(response, constraints)
+    assert passed is True      # 句数统计仍正确
+
+
+def test_single_newline_as_paragraph_separator():
+    """单换行分段的文本应被兜底逻辑正确处理"""
+    response = "第一段第一句。第一段第二句。\n第二段第一句。第二段第二句。\n第三段第一句。第三段第二句。"
+    constraints = {"paragraph": {"num_paragraphs": 3, "sentences_per_paragraph": 2}}
+    passed, _ = validate_response(response, constraints)
+    assert passed is True
