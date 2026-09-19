@@ -1,3 +1,15 @@
+# === 深度学习核心 ===
+torch>=2.7.0
+torchvision
+torchaudio
+
+# === 微调相关 ===
+peft>=0.20.0
+transformers>=5.17.0
+datasets>=5.0.0
+accelerate>=1.15.0
+
+# === 工具 ===
 python-dotenv
 requests
 tqdm
