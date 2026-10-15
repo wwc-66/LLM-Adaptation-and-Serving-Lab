@@ -13,7 +13,7 @@ def call_teacher(
     api_key: str = "ollama",
     base_url: str = "http://localhost:11434/v1",
     max_retries: int = 3,
-    timeout: int = 60,
+    timeout: int = 180,
     backoff_base: float = 0.5,
 ) -> dict:
     """
