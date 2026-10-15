@@ -1,0 +1,16 @@
+{
+  "total_valid": 8,
+  "total_rejected": 2,
+  "validator_pass_rate": 80.0,
+  "by_split": {
+    "train": 8,
+    "val": 0,
+    "test": 0
+  },
+  "by_difficulty": {
+    "simple": 8
+  },
+  "by_template": {
+    "T1": 8
+  }
+}
