@@ -1,0 +1,31 @@
+{
+  "total_valid": 392,
+  "total_rejected": 168,
+  "validator_pass_rate": 70.0,
+  "by_split": {
+    "train": 216,
+    "val": 96,
+    "test": 80
+  },
+  "by_difficulty": {
+    "simple": 158,
+    "medium": 194,
+    "hard": 40
+  },
+  "by_template": {
+    "T1": 27,
+    "T2": 30,
+    "T3": 22,
+    "T4": 27,
+    "T5": 26,
+    "T6": 27,
+    "T7": 28,
+    "T8": 29,
+    "T9": 30,
+    "T10": 31,
+    "T11": 35,
+    "T12": 30,
+    "T13": 23,
+    "T14": 27
+  }
+}
