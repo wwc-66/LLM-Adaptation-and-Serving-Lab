@@ -1,0 +1,1942 @@
+{
+  "model_path": "Qwen/Qwen3-8B",
+  "adapter_path": null,
+  "total": 80,
+  "total_valid": 6,
+  "total_rejected": 74,
+  "pass_rate": 7.5,
+  "by_difficulty": {
+    "simple": {
+      "total": 34,
+      "passed": 5,
+      "pass_rate": 14.71
+    },
+    "medium": {
+      "total": 36,
+      "passed": 0,
+      "pass_rate": 0.0
+    },
+    "hard": {
+      "total": 10,
+      "passed": 1,
+      "pass_rate": 10.0
+    }
+  },
+  "failure_modes": {
+    "长度超限": 62,
+    "段落/句数错误": 57,
+    "含禁用词": 3
+  },
+  "details": [
+    {
+      "id": "test_T12_0001",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "工业革命为什么从英国开始",
+      "topic_domain": "history",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "主题：工业革命为什么从英国开始\n硬约束｜长度80~100｜",
+      "response": "工业革命始于英国，源于其独特的政治经济环境。君主立宪制保障商业自由，圈地运动提供自由劳动力，殖民扩张拓展原料与市场。同时，资本积累、技术革新（如蒸汽机）与农业革命推动生产效率提升，形成良性循环，使英国率先实现工业化转型。",
+      "passed": false,
+      "violations": [
+        "长度 110 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0002",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "彩虹是怎么形成的",
+      "topic_domain": "science",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "回答问题：彩虹是怎么形成的。\n硬约束｜长度80~100｜",
+      "response": "彩虹由太阳光进入水滴时的折射、反射和色散形成。不同波长的光折射率不同，分散成七色。观察者背对太阳时，因水滴对光线的散射作用，可见弧形光带。",
+      "passed": false,
+      "violations": [
+        "长度 69 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0003",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "植物如何进行光合作用",
+      "topic_domain": "science",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "主题：植物如何进行光合作用\n硬约束｜长度80~100｜",
+      "response": "植物通过叶绿体进行光合作用，利用光能将二氧化碳和水转化为葡萄糖，释放氧气。叶绿素吸收光能，驱动水的光解和二氧化碳的固定，最终合成有机物并储存能量，为生命提供基础物质与能量来源。",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "id": "test_T12_0004",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "职场沟通的三个原则",
+      "topic_domain": "workplace",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "回答问题：职场沟通的三个原则。\n硬约束｜长度80~100｜",
+      "response": "职场沟通三原则：明确目标，确保信息传递清晰无误；尊重差异，包容多元观点与文化；积极倾听，专注理解对方需求与意图。三者相辅相成，提升协作效率，减少误解冲突，构建高效职场关系。",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "id": "test_T12_0005",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "如何正确洗手",
+      "topic_domain": "daily_life",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "回答问题：如何正确洗手。\n硬约束｜长度80~100｜",
+      "response": "正确洗手步骤：湿润双手，涂抹肥皂，搓洗手掌、手背、指缝、指尖及手腕，持续20秒以上，彻底冲洗，用干净毛巾擦干。饭前便后、接触公共物品后需洗手，保持手部卫生。",
+      "passed": false,
+      "violations": [
+        "长度 78 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0006",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "如何搭配营养均衡的午餐",
+      "topic_domain": "food",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "主题：如何搭配营养均衡的午餐\n80-100字。",
+      "response": "午餐应包含主食（如糙米、全麦面包）、优质蛋白（鸡蛋、瘦肉、豆制品）和丰富蔬果（深色蔬菜、柑橘类水果），搭配适量坚果或橄榄油补充健康脂肪。避免油炸食品，控制盐糖摄入，保持饮食多样化，确保营养全面。同时注意适量饮水，维持能量与代谢平衡。",
+      "passed": false,
+      "violations": [
+        "长度 116 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0007",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "大学生应该培养哪些能力",
+      "topic_domain": "campus",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "回答问题：大学生应该培养哪些能力。\n80-100字。",
+      "response": "大学生应培养自主学习能力、批判性思维与创新意识，提升沟通协作与团队管理技能。同时，需强化实践能力与数字素养，适应科技发展。此外，培养跨文化理解力与终身学习习惯，增强抗压与适应变化的能力，为未来职业发展与社会贡献奠定坚实基础。",
+      "passed": false,
+      "violations": [
+        "长度 112 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0008",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "求职面试的常见误区",
+      "topic_domain": "workplace",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "回答问题：求职面试的常见误区。\n硬约束｜长度80~100｜",
+      "response": "求职面试常见误区包括：准备不足、过度紧张、只谈经历不展示潜力、忽视公司文化、盲目自信或自卑、不问问题、迟到、过度包装简历、缺乏真实性、未准备常见问题。需提前调研企业，展现自我价值与适配性，保持自然自信，避免过度修饰。",
+      "passed": false,
+      "violations": [
+        "长度 108 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0009",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "自动驾驶的原理",
+      "topic_domain": "technology",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "回答问题：自动驾驶的原理。\n硬约束｜长度80~100｜",
+      "response": "自动驾驶通过传感器（如激光雷达、摄像头、雷达）实时感知环境，结合AI算法（如深度学习）处理数据并决策（路径规划、避障），最终由执行机构（转向、刹车、油门）控制车辆。系统依赖高精度地图与实时数据融合，确保安全冗余，实现自主驾驶。",
+      "passed": false,
+      "violations": [
+        "长度 113 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0010",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "中餐和西餐的区别",
+      "topic_domain": "food",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "主题：中餐和西餐的区别\n硬约束｜长度80~100｜",
+      "response": "中餐讲究炒、煮，重调味，食材多样，多用米面，注重色香味，常共餐；西餐以烤、煎为主，强调原味，常用面包、肉类，分餐制，注重刀叉礼仪。两者在烹饪技法、用餐习惯及文化内涵上差异显著。",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "id": "test_T12_0011",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "如何高效组织一次会议",
+      "topic_domain": "workplace",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "主题：如何高效组织一次会议\n硬约束｜长度80~100｜",
+      "response": "高效组织会议需明确目标与议程，提前发送资料，确保参与者准备充分。会议中聚焦核心议题，控制时间，避免跑题。使用计时器约束发言，鼓励简洁表达。会后及时跟进行动项，落实决策，确保成果可追踪。",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "id": "test_T12_0012",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "旅行的意义是什么",
+      "topic_domain": "entertainment",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "主题：旅行的意义是什么\n80-100字。",
+      "response": "旅行的意义在于突破日常惯性，以陌生视角重构世界。它不仅是地理位移，更是心灵的迁徙——在异域文化中照见自我，在自然奇观里触摸永恒。每一次出发都是对认知边界的试探，每段旅程终将沉淀为生命经验的注脚，让灵魂在流动的风景中获得重生的可能。",
+      "passed": false,
+      "violations": [
+        "长度 115 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0013",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "求职面试的常见误区",
+      "topic_domain": "workplace",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "主题：求职面试的常见误区\n60-80字。\n段落3｜句/段2｜",
+      "response": "求职面试中，过度准备易显生硬，紧张导致表达不清是常见误区。忽视公司文化、缺乏自我认知、盲目套话等，均可能影响面试效果。",
+      "passed": false,
+      "violations": [
+        "长度 59 不在 [60, 80] 范围内",
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T12_0014",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "电子游戏的利与弊",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "回答问题：电子游戏的利与弊。\n硬约束｜长度60~80｜\n3段。每段2句。",
+      "response": "电子游戏能提升认知能力与反应速度，培养策略思维与团队协作。适度游戏可缓解压力，增强社交互动与娱乐体验。\n\n过度沉迷易导致视力下降与作息紊乱，影响学习与工作效率。部分游戏内容可能引发暴力倾向或价值观偏差。\n\n家长与社会应引导合理游戏时间，平衡娱乐与学习，发挥游戏的积极价值。科学监管与自律是关键，避免负面影响扩大。",
+      "passed": false,
+      "violations": [
+        "长度 156 不在 [60, 80] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0015",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "旅行的意义是什么",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "回答问题：旅行的意义是什么。\n硬约束｜长度60~80｜\n3段。每段2句。",
+      "response": "旅行的意义在于突破日常惯性，拓宽认知边界。脚步丈量世界，心灵感知差异，让陌生风景唤醒沉睡的感知力。  \n它是一场自我对话的契机，在异乡的烟火气里照见内心褶皱，重构对生活的理解与期待。  \n真正的意义不在于风景多美，而在于旅程中学会与不确定性共处，让生命获得流动的韧性。",
+      "passed": false,
+      "violations": [
+        "长度 134 不在 [60, 80] 范围内",
+        "第 2 段句数 1 不等于 2",
+        "第 3 段句数 1 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T12_0016",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "人工智能会取代哪些工作",
+      "topic_domain": "technology",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "主题：人工智能会取代哪些工作\n60-80字。\n3段。每段2句。",
+      "response": "人工智能将取代重复性高、规则明确的工作，如制造业流水线岗位和数据录入员。算法可高效处理标准化任务，降低人力成本。  \n服务业中，客服机器人和自动收银系统已逐步替代部分基层岗位，提升效率。但需人际互动的岗位仍需人类主导。  \n创意类与情感交流型工作，如艺术创作和心理咨询，因需主观判断与共情能力，短期内难以被完全取代。",
+      "passed": false,
+      "violations": [
+        "长度 158 不在 [60, 80] 范围内",
+        "第 3 段句数 1 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T12_0019",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "工业革命为什么从英国开始",
+      "topic_domain": "history",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "回答问题：工业革命为什么从英国开始。\n硬约束｜长度100~150｜\n段落3｜句/段2｜",
+      "response": "工业革命始于英国，源于其独特的资源与制度优势。丰富的煤炭与铁矿为工业化提供基础，海外殖民贸易积累大量资本。君主立宪制保障私有产权，鼓励技术创新与资本投入。  \n农业革命提升粮食产量，释放劳动力推动制造业发展。蒸汽机与纺织机械的发明加速生产转型，市场需求扩大刺激产业扩张。  \n政治稳定与开放的商业环境，使英国率先实现从手工业到机器大生产的跨越，奠定现代工业体系雏形。",
+      "passed": false,
+      "violations": [
+        "长度 183 不在 [100, 150] 范围内",
+        "第 1 段句数 3 不等于 2",
+        "第 3 段句数 1 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T12_0020",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "电饭煲煮饭的原理",
+      "topic_domain": "daily_life",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "回答问题：电饭煲煮饭的原理。\n100-150字。\n段落3｜句/段2｜",
+      "response": "电饭煲通过电热元件加热内胆，使水沸腾并产生蒸汽。蒸汽热量传递至米饭，使其受热膨胀，完成煮熟过程。内胆材质多为导热性良好的不锈钢或铝合金，确保热量均匀分布。\n\n温控器在水沸腾后自动切换至保温模式，维持约100℃的恒温环境。此温度可使米饭充分吸水软化，同时防止过度加热导致糊底，实现外酥内软的口感。部分高端型号还具备智能控温功能，根据米量和水比例精准调节功率。",
+      "passed": false,
+      "violations": [
+        "长度 178 不在 [100, 150] 范围内",
+        "段落数 2 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T12_0023",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "求职面试的常见误区",
+      "topic_domain": "workplace",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "主题：求职面试的常见误区\n硬约束｜长度60~80｜\n3段。每段2句。",
+      "response": "求职面试常见误区  \n过度准备套路化回答，易显生硬失真。  \n只谈自身优势忽略岗位需求，难获共鸣。  \n忽视公司文化与价值观，错失匹配机会。",
+      "passed": false,
+      "violations": [
+        "段落数 4 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T12_0024",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "如何撰写周报",
+      "topic_domain": "workplace",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "主题：如何撰写周报\n硬约束｜长度100~150｜\n段落3｜句/段2｜",
+      "response": "周报需结构清晰，分模块呈现。重点突出成果与问题，用数据支撑结论。  \n简明扼要，避免冗长描述，聚焦核心进展与待解决事项。  \n下周计划需具体可行，明确目标与协作需求，体现主动性。",
+      "passed": false,
+      "violations": [
+        "长度 89 不在 [100, 150] 范围内",
+        "第 2 段句数 1 不等于 2",
+        "第 3 段句数 1 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T12_0025",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "为什么海水是咸的",
+      "topic_domain": "science",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "主题：为什么海水是咸的\n硬约束｜长度60~80｜\n段落3｜句/段2｜",
+      "response": "海水咸味源于矿物质沉积。火山喷发与海底热泉释放盐分。河流携带陆地矿物质汇入海洋。长期地质作用形成咸度。现代河流持续输入溶解物质。人类活动加速盐分循环。",
+      "passed": false,
+      "violations": [
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T12_0027",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "如何挑选新鲜水果",
+      "topic_domain": "daily_life",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "回答问题：如何挑选新鲜水果。\n硬约束｜长度100~150｜\n3段。每段2句。",
+      "response": "挑选新鲜水果需关注外观与触感。颜色鲜艳、光泽度高且无明显损伤的水果通常更新鲜，避免选择表皮皱缩或有腐烂斑点的。不同水果成熟度不同，如苹果应带青绿色，香蕉则需保留尖端青色。\n\n轻捏果实判断硬度，成熟度适中的水果应有弹性且不易压扁。若果实散发浓郁香气，说明成熟度较高；若有异味则可能已变质。避免选择过于柔软或有明显裂痕的。\n\n优先",
+      "passed": false,
+      "violations": [
+        "长度 163 不在 [100, 150] 范围内",
+        "第 1 段句数 3 不等于 2",
+        "第 2 段句数 3 不等于 2",
+        "第 3 段句数 1 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T12_0029",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "如何选择选修课",
+      "topic_domain": "campus",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "主题：如何选择选修课\n100-150字。\n段落3｜句/段2｜",
+      "response": "选修课选择需结合兴趣与实用性。优先考虑与专业相关或拓展知识面的课程，避免盲目跟风。同时关注课程难度与学分要求，确保符合毕业条件。\n\n平衡个人发展与学业规划是关键。可参考学长经验或咨询导师，了解课程实际内容与评价。最终选择应兼顾学习热情与未来发展方向，避免因短期兴趣而影响整体规划。",
+      "passed": false,
+      "violations": [
+        "段落数 2 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T12_0030",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "如何挑选新鲜水果",
+      "topic_domain": "daily_life",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "主题：如何挑选新鲜水果\n硬约束｜长度60~80｜\n段落3｜句/段2｜",
+      "response": "段落1：观察颜色与光泽，避免伤痕。选择饱满无皱缩的果实。  \n段落2：轻捏果实测硬度，弹性佳者更新鲜。无异味为佳。  \n段落3：优先当季本地产，运输少更优质。按需购买减少浪费。",
+      "passed": false,
+      "violations": [
+        "长度 88 不在 [60, 80] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0032",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "电子游戏的利与弊",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "回答问题：电子游戏的利与弊。\n硬约束｜长度60~80｜\n段落3｜句/段2｜",
+      "response": "电子游戏能提升认知能力，增强反应速度与",
+      "passed": false,
+      "violations": [
+        "长度 19 不在 [60, 80] 范围内",
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T12_0034",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "为什么辣的食物让人上瘾",
+      "topic_domain": "food",
+      "difficulty": "hard",
+      "constraints": {
+        "length": {
+          "min": 150,
+          "max": 200
+        },
+        "paragraph": {
+          "num_paragraphs": 4,
+          "sentences_per_paragraph": 3
+        },
+        "forbidden_word": "所以"
+      },
+      "prompt": "主题：为什么辣的食物让人上瘾\n150-200字。\n4段。每段3句。\n禁用：“所、以”。",
+      "response": "辣的食物引发上瘾机制涉及多重生理反应。辣椒素刺激口腔神经时，会激活TRPV1受体，引发灼热感。这种刺激促使大脑释放内啡肽，产生短暂愉悦。内啡肽水平升高会增强多巴胺分泌，形成正向反馈。\n\n长期食用辣食会改变神经适应性。身体逐渐对辣椒素产生耐受，需更高浓度才能触发相同反应。耐受性提升后，停止食用会引发戒断症状，如口腔麻木或不适。这种生理依赖促使人们持续摄入辣味。\n\n心理因素同样推动辣食成瘾。文化习惯中，辣味常与社交场景绑定，形成条件反射。心理预期会放大实际感受，使愉悦感更强烈。习惯性行为强化了对辣味的渴望，即使伴随不适也难以戒除。\n\n个体差异影响辣食依赖程度。基因决定的痛觉敏感度和代谢能力决定耐受阈值。长期摄入可能干扰消化系统，但成瘾性更多源于心理强化。适度控制摄入量，可避免健康风险。",
+      "passed": false,
+      "violations": [
+        "长度 345 不在 [150, 200] 范围内",
+        "第 1 段句数 4 不等于 3",
+        "第 2 段句数 4 不等于 3",
+        "第 3 段句数 4 不等于 3",
+        "第 4 段句数 4 不等于 3",
+        "出现禁用词 '以'"
+      ]
+    },
+    {
+      "id": "test_T12_0035",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "如何选择选修课",
+      "topic_domain": "campus",
+      "difficulty": "hard",
+      "constraints": {
+        "length": {
+          "min": 150,
+          "max": 200
+        },
+        "paragraph": {
+          "num_paragraphs": 4,
+          "sentences_per_paragraph": 3
+        },
+        "forbidden_word": "从而"
+      },
+      "prompt": "回答问题：如何选择选修课。\n硬约束｜长度150~200｜\n段落4｜句/段3｜\n禁词：“从、而”",
+      "response": "选修课选择需兼顾多方面因素。优先考虑个人兴趣，课程内容应与专业方向或未来职业规划相关。关注课程难度与学分要求，避免因负担过重影响主修学业。建议提前查阅课程大纲，了解教学目标与考核方式。合理分配时间，确保选课与学习计划协调。结合导师建议，评估课程对综合能力的提升价值。最终决策应平衡兴趣、实用性与可行性，形成科学选课方案。",
+      "passed": false,
+      "violations": [
+        "段落数 1 不等于 4"
+      ]
+    },
+    {
+      "id": "test_T12_0036",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "郑和下西洋的目的",
+      "topic_domain": "history",
+      "difficulty": "hard",
+      "constraints": {
+        "length": {
+          "min": 150,
+          "max": 200
+        },
+        "paragraph": {
+          "num_paragraphs": 4,
+          "sentences_per_paragraph": 3
+        },
+        "forbidden_word": "从而"
+      },
+      "prompt": "回答问题：郑和下西洋的目的。\n硬约束｜长度150~200｜\n4段。每段3句。\n禁词：“从、而”",
+      "response": "郑和下西洋旨在展示明朝国力。通过航海活动彰显国家威望。强化与海外诸国的联系。\n\n拓展海上贸易网络是重要目标。获取异域珍宝与特产资源。促进经济交流与物资流通。\n\n建立友好外交关系是核心任务。处理朝贡事务维护海上秩序。增进文化互鉴与政治互信。\n\n探索未知海域是深层动机。获取地理信息丰富航海知识。推动航海技术与航海图发展。",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "id": "test_T12_0038",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "丝绸之路的历史意义",
+      "topic_domain": "history",
+      "difficulty": "hard",
+      "constraints": {
+        "length": {
+          "min": 150,
+          "max": 200
+        },
+        "paragraph": {
+          "num_paragraphs": 4,
+          "sentences_per_paragraph": 3
+        },
+        "forbidden_word": "所以"
+      },
+      "prompt": "主题：丝绸之路的历史意义\n硬约束｜长度150~200｜\n段落4｜句/段3｜\n禁词：“所、以”",
+      "response": "丝绸之路是古代东西方交流的重要通道。它连接欧亚大陆，促进商品流通与文化互动。商队携带丝绸、香料等物资，推动沿线城市繁荣。\n\n贸易网络带动区域经济协同发展。各地商人交换货物，形成跨文化商业体系。货币体系与信用制度逐步完善，奠定经济合作基础。\n\n宗教与艺术沿丝路广泛传播。佛教、伊斯兰教等信仰跨越地域传播，建筑风格与工艺技术相互影响。多元文化交融塑造独特文明景观。\n\n现代丝路精神延续历史价值。互联互通理念推动全球合作，促进文明互鉴与共同发展。古代通道启示当代构建人类命运共同体。",
+      "passed": false,
+      "violations": [
+        "长度 238 不在 [150, 200] 范围内"
+      ]
+    },
+    {
+      "id": "test_T12_0039",
+      "template_id": "T12",
+      "split": "test",
+      "style": "terse_declaration",
+      "topic": "远程办公的优势与挑战",
+      "topic_domain": "workplace",
+      "difficulty": "hard",
+      "constraints": {
+        "length": {
+          "min": 150,
+          "max": 200
+        },
+        "paragraph": {
+          "num_paragraphs": 4,
+          "sentences_per_paragraph": 3
+        },
+        "forbidden_word": "进而"
+      },
+      "prompt": "主题：远程办公的优势与挑战\n150-200字。\n4段。每段3句。\n禁词：“进、而”",
+      "response": "远程办公提升工作效率，减少通勤压力，增强员工自主性。灵活安排时间有助于平衡生活需求，降低疲劳感。数字工具支持实时协作，打破地理限制。  \n\n自主选择工作环境可优化专注力，减少干扰因素。任务完成度常因无监督而提高，激发责任感。团队成员间沟通效率依赖技术平台稳定性。  \n\n缺乏面对面交流易导致信息误解，影响团队凝聚力。工作与生活界限模糊可能引发倦怠，降低长期积极性。设备故障或网络中断会中断任务进度。  \n\n企业需建立明确规范，定期组织线上会议维护联系。员工应设定清晰目标，使用时间管理工具保持节奏。合理规划工作与休息，才能实现远程办公的可持续发展。",
+      "passed": false,
+      "violations": [
+        "长度 274 不在 [150, 200] 范围内",
+        "出现禁用词 '进'",
+        "出现禁用词 '而'"
+      ]
+    },
+    {
+      "id": "test_T13_0001",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "求职面试的常见误区",
+      "topic_domain": "workplace",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "围绕求职面试的常见误区这个话题写一段话，下面是要求：\n先满足字数80~100，",
+      "response": "求职面试中常见误区包括过度准备标准答案，导致表达生硬；忽视公司文化与岗位匹配度，仅关注薪资待遇；急于表现自我而忽略倾听面试官需求；过度紧张影响发挥，或因缺乏真实沟通显得不自信。建议保持真诚态度，结合自身经历展现适配性，同时深入了解企业价值观，以自然流畅的交流赢得认可。（99字）",
+      "passed": false,
+      "violations": [
+        "长度 139 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0002",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "丝绸之路的历史意义",
+      "topic_domain": "history",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "围绕丝绸之路的历史意义这个话题写一段话，下面是要求：\n先满足字数80~100，",
+      "response": "丝绸之路作为古代东西方交流的纽带，不仅促进了商品贸易，更推动了文化、科技与宗教的传播。它连接起中原与西域、地中海与东亚，使丝绸、瓷器、香料等商品流通，同时传播了造纸术、佛教、伊斯兰教等文明成果，深刻影响了欧亚大陆的历史进程，成为人类文明互鉴的典范。（99字）",
+      "passed": false,
+      "violations": [
+        "长度 129 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0005",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "印刷术对欧洲的影响",
+      "topic_domain": "history",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "围绕印刷术对欧洲的影响这个话题写一段话，下面是要求：\n先满足字数80~100，",
+      "response": "印刷术的发明极大推动了欧洲社会变革。古腾堡改进的活字印刷技术使书籍大规模生产成为可能，加速了知识传播，促进了宗教改革运动，使《圣经》等著作广泛流传，打破教会垄断。同时推动了教育普及和科学革命，为启蒙思想奠定基础，深刻改变了欧洲文化格局。（99字）",
+      "passed": false,
+      "violations": [
+        "长度 123 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0006",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "中餐和西餐的区别",
+      "topic_domain": "food",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "围绕中餐和西餐的区别这个话题写一段话，下面是要求：\n先满足字数80~100，",
+      "response": "中餐与西餐在烹饪方式、食材搭配及用餐习惯上差异显著。中餐注重色香味俱全，常用炒、煮、蒸等技法，讲究食材原味与调味融合，餐具以筷子为主，体现家庭共餐的温馨氛围；西餐则强调火候与摆盘艺术，多采用烤、煎等技法，注重食材本味与精致呈现，刀叉餐具与分餐制更凸显个人用餐体验。两者文化背景不同，中餐体现集体共享，西餐侧重个体享受，共同构成世界饮食文化的多元魅力。（99字）",
+      "passed": false,
+      "violations": [
+        "长度 180 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0007",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "彩虹是怎么形成的",
+      "topic_domain": "science",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "围绕彩虹是怎么形成的这个话题写一段话，下面是要求：\n长度：80~100字。",
+      "response": "<think>\n好的，用户让我围绕彩虹是怎么形成的写一段话，长度要求是80到100字。首先，我需要确定彩虹形成的基本原理。记得彩虹是由于阳光在水滴中的折射、反射和色散造成的。可能需要提到太阳的位置、水滴的作用，以及不同颜色的光分散的现象。\n\n接下来，要确保内容准确，不能有错误。比如，彩虹的形成需要水滴和阳光，而且太阳必须在观察者背后。可能还要提到七种颜色，但用户可能不需要具体列出颜色名称，只要提到色散即可。\n\n然后，检查字数。用户要求80到100字，所以需要简洁。可能需要分两到三句话，先说明形成原因，再解释过程，最后提到观察条件。比如：“彩虹由阳光在水滴中的折射、反射和色散形成。当太阳光进入水滴时，不同波长的光被折射并分散，形成七色光谱。观察者需背对太阳，面对水滴才能看到彩虹。” 这样大概在80字左右，可能需要调整用词更准确。\n\n还要注意术语是否正确，比如“色散”是否正确，是否应该用“折射和反射”还是“折射、反射和色散”。可能需要确认步骤顺序：光线进入水滴折射，反射内部，再折射出去，导致色散。所以正确的顺序是折射、反射、折射，同时色散发生在折射过程中。因此，可能需要更准确地描述这个过程。\n\n另外，用户可能希望语言通俗易懂，避免过于专业的术语，但又要准确。比如“色散”可能需要解释为不同颜色的光分开。可能需要调整句子结构，使其更流畅。例如：“彩虹是阳光在水滴中折射、反射和色散的结果。当太阳光进入水滴时，不同波长的光被折射并分散，形成七色光谱。观察者需背对太阳，面对水滴才能看到彩虹。” 这样可能更符合要求，同时控制在字数内。\n\n最后检查字数，确保在80到100之间。可能需要删减或调整句子，比如去掉“七色光谱”或者“形成”等词，但必须保持信息完整。可能最终版本是：“彩虹由阳光在水滴中的折射、反射和色散形成。当太阳光进入水滴时，不同波长的光被折射",
+      "passed": false,
+      "violations": [
+        "长度 781 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0008",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "为什么辣的食物让人上瘾",
+      "topic_domain": "food",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "围绕为什么辣的食物让人上瘾这个话题写一段话，下面是要求：\n长度：80~100字。",
+      "response": "辣的食物让人上瘾主要源于辣椒素刺激口腔神经后，大脑释放内啡肽和多巴胺，产生愉悦感。这种生理快感与成瘾机制相似，使人渴望重复体验。同时，辣味带来的灼烧感与愉悦感的反差，以及文化习惯和社交认同，进一步强化了心理依赖，形成复杂的成瘾效应。（99字）",
+      "passed": false,
+      "violations": [
+        "长度 121 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0009",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "地震是如何发生的",
+      "topic_domain": "science",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "围绕地震是如何发生的这个话题写一段话，下面是要求：\n先满足字数80~100，",
+      "response": "地震是地壳板块运动引发的自然现象。当板块相互碰撞或错动时，地壳内部积累的应力会突然释放，导致断层破裂。这种能量释放以地震波形式向四周传播，使地面产生震动。板块边界处的构造活动，如火山喷发或断层带滑动，是地震频发区域。地震的强度与能量释放规模相关，可能造成建筑物损毁和人员伤亡。地壳内部的岩层错动是地震发生的根本原因。",
+      "passed": false,
+      "violations": [
+        "长度 158 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0010",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "为什么海水是咸的",
+      "topic_domain": "science",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "围绕为什么海水是咸的这个话题写一段话，下面是要求：\n先满足字数80~100，",
+      "response": "海水的咸味主要源于地球长期的地质和水文循环过程。陆地上的岩石经风化作用释放出大量矿物质，通过河流将这些盐分带入海洋。同时，海底火山活动和热液喷口也会向海水中注入矿物质。此外，海底沉积物的溶解和海水蒸发作用进一步增加了盐分浓度。这些持续的自然过程使海水逐渐积累了丰富的盐类物质，形成了我们今天所见的咸味。",
+      "passed": false,
+      "violations": [
+        "长度 151 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0011",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "为什么推荐算法这么准",
+      "topic_domain": "technology",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "请就为什么推荐算法这么准作答。要求层层递进：\n长度：80~100字。",
+      "response": "推荐算法精准源于多层逻辑：首先，基于多源用户行为数据（点击、购买、评分）捕捉偏好；其次，结合协同过滤、深度学习等模型挖掘复杂关联；最终，通过实时反馈闭环持续优化，形成“数据-模型-反馈”正向循环，实现动态精准匹配。",
+      "passed": false,
+      "violations": [
+        "长度 107 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0012",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "图书馆的利用技巧",
+      "topic_domain": "campus",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "围绕图书馆的利用技巧这个话题写一段话，下面是要求：\n先满足字数80~100，",
+      "response": "图书馆是知识宝库，善用技巧可提升效率。首先，熟悉分类系统，快速定位所需书籍；其次，善用电子资源，通过数据库检索专业文献。借阅时注意归还期限，避免逾期。保持安静环境，专注阅读。遇到问题可咨询馆员，及时反馈建议，优化服务。合理规划时间，充分利用馆内设施，让图书馆成为高效学习的助力。",
+      "passed": false,
+      "violations": [
+        "长度 139 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0014",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "自动驾驶的原理",
+      "topic_domain": "technology",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "请就自动驾驶的原理作答。要求层层递进：\n长度：100~150字。\n再分3段，每段2句，",
+      "response": "自动驾驶通过多传感器融合实现环境感知，利用激光雷达、摄像头和毫米波雷达获取道路信息，结合AI算法实时解析数据。感知系统将原始数据转化为三维地图与动态物体模型，为后续决策提供基础。\n\n决策系统基于路径规划与行为预测，通过深度学习模型判断交通规则与风险等级，生成最优行驶策略。算法需平衡安全、效率与舒适性，动态调整车速与车道保持参数。\n\n执行系统将决策指令转化为机械动作，通过线控转向、制动与动力系统精准控制车辆。闭环反馈机制持续校准误差，确保系统在复杂路况中稳定运行。",
+      "passed": false,
+      "violations": [
+        "长度 233 不在 [100, 150] 范围内"
+      ]
+    },
+    {
+      "id": "test_T13_0015",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "如何辨别食物是否变质",
+      "topic_domain": "food",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "请就如何辨别食物是否变质作答。要求层层递进：\n长度：60~80字。\n在此基础上，分3段。进一步地，每段2句。",
+      "response": "辨别食物变质需多维度观察。首先看外观，颜色异常或发霉即为变质。其次闻气味，酸臭或腐败味是明显信号。最后触感判断，黏腻或弹性丧失提示腐败。\n\n观察包装完整性，破损易滋生细菌。检查保质期，过期食品风险高。注意储存环境，温度不当加速变质。\n\n结合感官与常识判断，异常状态需果断丢弃。定期清理冰箱，避免交叉污染。养成良好习惯，保障饮食安全。",
+      "passed": false,
+      "violations": [
+        "长度 166 不在 [60, 80] 范围内",
+        "第 1 段句数 4 不等于 2",
+        "第 2 段句数 3 不等于 2",
+        "第 3 段句数 3 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T13_0016",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "如何高效组织一次会议",
+      "topic_domain": "workplace",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "围绕如何高效组织一次会议这个话题写一段话，下面是要求：\n长度：100~150字。\n再分3段，每段2句，",
+      "response": "高效组织会议需明确目标与议程。首先，确定会议核心议题并制定详细议程，确保所有参与者清楚讨论方向。会前充分准备材料，提前发送给与会者，便于提前思考。\n\n会议中应控制时间，严格遵循议程推进。主持人需引导讨论，避免偏离主题，同时鼓励成员积极发言。适时记录关键决策与行动项，确保信息透明。\n\n会后及时整理会议纪要，明确责任人与截止时间。跟进任务进度，评估会议成效，为下次优化提供参考。通过系统化流程提升效率，减少无效沟通。",
+      "passed": false,
+      "violations": [
+        "长度 207 不在 [100, 150] 范围内",
+        "第 1 段句数 3 不等于 2",
+        "第 2 段句数 3 不等于 2",
+        "第 3 段句数 3 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T13_0017",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "如何选择适合自己的书",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "请就如何选择适合自己的书作答。要求层层递进：\n长度：100~150字。\n再分3段，每段2句，",
+      "response": "选择适合自己的书需层层递进。首先，明确兴趣与需求，兴趣驱动阅读热情，需求导向选择方向。其次，根据阅读目的筛选内容，娱乐类书可随性选择，学习类书需注重系统性，自我提升类书应匹配当前认知水平。\n\n再者，关注书籍的可读性与深度，语言风格需与个人习惯契合，内容深度应与理解能力匹配。最后，通过实践检验选择，记录阅读反馈，逐步调整阅读策略，形成个性化书单。",
+      "passed": false,
+      "violations": [
+        "长度 173 不在 [100, 150] 范围内",
+        "段落数 2 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T13_0021",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "如何搭配营养均衡的午餐",
+      "topic_domain": "food",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "围绕如何搭配营养均衡的午餐这个话题写一段话，下面是要求：\n长度：60~80字。\n在此基础上，分3段。进一步地，每段2句。",
+      "response": "午餐搭配需注重营养均衡。主食选择糙米或全麦面包，补充膳食纤维。搭配鸡胸肉或豆腐，提供优质蛋白质。\n\n蔬菜水果应占餐盘一半，绿叶菜和番茄富含维生素。适量摄入坚果或酸奶，补充健康脂肪与钙质。\n\n控制油盐用量，避免高糖饮料，保持饮食清淡。多样化食材组合，满足身体日常所需。",
+      "passed": false,
+      "violations": [
+        "长度 133 不在 [60, 80] 范围内",
+        "第 1 段句数 3 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T13_0022",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "彩虹是怎么形成的",
+      "topic_domain": "science",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "围绕彩虹是怎么形成的这个话题写一段话，下面是要求：\n先满足字数100~150，\n再分3段，每段2句，",
+      "response": "彩虹的形成是光的折射与反射共同作用的结果。当阳光进入水滴时，光线会发生折射并分解为不同波长的色光，这是色散现象。水滴内部的反射使光线再次折射出水滴，不同颜色因折射角度差异而分离，形成七色光谱。\n\n光线在水滴中经过两次折射和一次反射后，红光折射角最大，紫光最小，导致颜色依次排列。这种色散效应使阳光分解为可见光谱，形成连续的色彩渐变。\n\n观察者需背对太阳，且水滴需悬浮在特定角度才能看到彩虹。彩虹的出现依赖于水滴的大小、光线强度及观察位置，这些因素共同决定了其形态与可见性。",
+      "passed": false,
+      "violations": [
+        "长度 236 不在 [100, 150] 范围内",
+        "第 1 段句数 3 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T13_0023",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "如何选择适合自己的书",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "围绕如何选择适合自己的书这个话题写一段话，下面是要求：\n先满足字数100~150，\n再分3段，每段2句，",
+      "response": "选择适合自己的书需要结合兴趣与目标。若想提升知识，可优先选择专业领域书籍；若追求娱乐，小说或散文更易引发共鸣。阅读目的不同，书籍类型也应相应调整。\n\n阅读习惯影响书籍选择，时间充裕时可尝试厚重经典，碎片时间则适合短篇随笔。书籍难度需与自身水平匹配，避免因理解困难而放弃阅读。\n\n通过试读和反馈调整选择，可逐步明确偏好。结合他人推荐与自主探索，既能拓宽视野，又能保持阅读热情。",
+      "passed": false,
+      "violations": [
+        "长度 187 不在 [100, 150] 范围内",
+        "第 1 段句数 3 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T13_0025",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "工业革命为什么从英国开始",
+      "topic_domain": "history",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "围绕工业革命为什么从英国开始这个话题写一段话，下面是要求：\n先满足字数100~150，\n再分3段，每段2句，",
+      "response": "工业革命从英国开始源于其独特的社会经济条件。17世纪英国确立的君主立宪制保障了私有财产和契约精神，为资本积累提供了制度基础。同时，农业革命带来的剩余劳动力和圈地运动形成的自由劳动力市场，为工业生产创造了必要条件。\n\n英国拥有丰富的煤炭和铁矿资源，为蒸汽机等新技术的发明与应用提供了物质基础。16至17世纪的科学革命推动了技术革新，如瓦特改良蒸汽机，使机械化生产成为可能。这些技术突破与资源优势结合，形成了工业化的先决条件。\n\n殖民扩张带来的广阔海外市场和原材料供应，加速了英国工业化的进程。同时，英国的金融体系和信用制度支持了大规模投资，使工厂制度得以迅速扩展。这种政治、经济、技术",
+      "passed": false,
+      "violations": [
+        "长度 291 不在 [100, 150] 范围内",
+        "第 1 段句数 3 不等于 2",
+        "第 2 段句数 3 不等于 2",
+        "第 3 段句数 3 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T13_0030",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "为什么手机电池会老化",
+      "topic_domain": "technology",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "围绕为什么手机电池会老化这个话题写一段话，下面是要求：\n长度：100~150字。\n在此基础上，分3段。进一步地，每段2句。",
+      "response": "手机电池老化主要源于化学反应的不可逆性。锂离子在充放电过程中持续迁移，导致活性物质逐渐流失。这种损耗会降低电池容量，使续航时间缩短。\n\n高温环境和过度充电会加速电池老化。长时间暴露在高温下会破坏电解液结构，而频繁满电状态会引发锂枝晶生长。这些因素都会缩短电池使用寿命。\n\n电池老化是自然物理过程，无法完全避免。但合理使用和存储可延缓衰减，如避免高温环境、避免过度充放电，有助于延长电池寿命。",
+      "passed": false,
+      "violations": [
+        "长度 195 不在 [100, 150] 范围内",
+        "第 1 段句数 3 不等于 2",
+        "第 2 段句数 3 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T13_0031",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "电子游戏的利与弊",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "围绕电子游戏的利与弊这个话题写一段话，下面是要求：\n先满足字数100~150，\n再分3段，每段2句，",
+      "response": "<think>\n好的，用户让我围绕电子游戏的利与弊写一段话，要求先满足字数100到150字，然后分三段，每段两句。首先，我需要确定主题的结构。利与弊通常需要平衡讨论，所以得先想好每个部分的关键点。\n\n先看字数要求，总字数在100到150之间，分三段，每段两句。可能需要先写一个总起段，然后分利和弊各一段。不过用户可能希望更明确的结构，比如先总述，再分利和弊，或者利弊各一段，最后总结。不过用户要求分三段，每段两句，所以可能需要总-分-总结构，或者利-弊-总结？\n\n不过用户可能希望每段都是独立的，比如第一段讲利，第二段讲弊，第三段讲总结或平衡。但需要确保每段两句，总字数符合。可能需要先草拟每个段落的内容。\n\n比如，第一段讲电子游戏的益处，比如提升反应能力、策略思维，促进社交。第二段讲弊端，如成瘾、视力问题，影响学习。第三段讲平衡，合理使用，家长监管，社会引导。这样分三段，每段两句，总字数大概在100-150之间。\n\n然后检查字数，确保每段大约50字左右。可能需要调整句子结构，使用更简洁的表达。比如第一段：“电子游戏具有显著益处，如提升反应能力与策略思维，同时促进社交互动。” 这样两句，大约20字左右，可能不够。需要扩展。\n\n可能需要更详细的例子，比如“电子游戏能增强手眼协调能力，培养战略思维，同时为玩家提供社交平台，增进友谊。” 这样两句，每句更长，但总字数可能超过。需要平衡。\n\n可能需要先写总起段，然后分利和弊，最后总结。例如：\n\n第一段：总起，说明电子游戏的双面性，既有益处也有弊端。\n\n第二段：益处，如提升技能、社交。\n\n第三段：弊端，如成瘾、健康问题。\n\n第四段：总结，合理使用的重要性。但用户要求三段，所以可能需要合并。比如总起一段，利一段，弊一段，或者利弊各一段，最后总结",
+      "passed": false,
+      "violations": [
+        "长度 749 不在 [100, 150] 范围内",
+        "段落数 11 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T13_0032",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "大学生应该培养哪些能力",
+      "topic_domain": "campus",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "请就大学生应该培养哪些能力作答。要求层层递进：\n长度：60~80字。\n再分3段，每段2句，",
+      "response": "大学生应首先培养自主学习与实践能力，奠定知识基础。其次需提升创新思维与批判性分析，突破固有认知。最终要强化综合应用与终身学习意识，适应社会变革。  \n\n基础能力是立足之本，需通过课程与实践积累。进阶能力关乎思维深度，需在反思中突破局限。高阶能力决定发展高度，需保持开放与持续进化。  \n\n能力培养需分层递进，从知识获取到思维跃迁，最终实现价值创造。唯有系统规划，方能应对未来挑战，成就全面发展。",
+      "passed": false,
+      "violations": [
+        "长度 197 不在 [60, 80] 范围内",
+        "第 1 段句数 3 不等于 2",
+        "第 2 段句数 3 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T13_0034",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "如何撰写周报",
+      "topic_domain": "workplace",
+      "difficulty": "hard",
+      "constraints": {
+        "length": {
+          "min": 150,
+          "max": 200
+        },
+        "paragraph": {
+          "num_paragraphs": 4,
+          "sentences_per_paragraph": 3
+        },
+        "forbidden_word": "所以"
+      },
+      "prompt": "围绕如何撰写周报这个话题写一段话，下面是要求：\n长度：150~200字。\n在此基础上，分4段。进一步地，每段3句。\n同时“所、以”不能用。",
+      "response": "撰写周报需明确目标，梳理核心内容。先确定汇报重点，再分点列出工作进展。每项任务需注明完成情况与成果数据。内容应简明扼要，避免冗长描述。  \n\n聚焦关键问题，分析工作难点与改进方向。需客观陈述遇到的障碍，同时提出解决思路。数据支撑结论，增强说服力与可信度。  \n\n语言表达要清晰规范，使用专业术语。避免模糊表述，确保信息传递准确。格式统一，标题层级分明，便于阅读理解。  \n\n定期总结经验，规划下周重点任务。梳理待办事项，明确责任人与时间节点。保持内容连贯性，为后续工作提供参考依据。",
+      "passed": false,
+      "violations": [
+        "长度 241 不在 [150, 200] 范围内",
+        "第 1 段句数 4 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T13_0037",
+      "template_id": "T13",
+      "split": "test",
+      "style": "progressive",
+      "topic": "为什么早餐很重要",
+      "topic_domain": "food",
+      "difficulty": "hard",
+      "constraints": {
+        "length": {
+          "min": 150,
+          "max": 200
+        },
+        "paragraph": {
+          "num_paragraphs": 4,
+          "sentences_per_paragraph": 3
+        },
+        "forbidden_word": "因此"
+      },
+      "prompt": "请就为什么早餐很重要作答。要求层层递进：\n先满足字数150~200，\n在此基础上，分4段。进一步地，每段3句。\n同时“因、此”不能用。",
+      "response": "早餐为身体提供必需营养，维持基础代谢。空腹过久易引发低血糖，影响日常活动。规律进食有助于稳定能量水平，提升整体活力。\n\n大脑发育依赖清晨营养供给，专注力与记忆力随之增强。营养均衡的餐食能延缓认知衰退，促进思维敏捷。长期忽视早餐可能削弱学习效率，影响工作表现。\n\n合理搭配蛋白质与膳食纤维，降低慢性病风险。",
+      "passed": false,
+      "violations": [
+        "段落数 3 不等于 4"
+      ]
+    },
+    {
+      "id": "test_T14_0001",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "彩虹是怎么形成的",
+      "topic_domain": "science",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "问：请介绍彩虹是怎么形成的。答：（请作答）\n问：字数多少？答：80~100。",
+      "response": "彩虹形成于阳光与水滴的相互作用。当阳光进入水滴时，因不同颜色光折射角度不同而发生色散，随后光线在水滴内反射并再次折射出水滴。观察者背对太阳时，会看到由红、橙、黄、绿、蓝、靛、紫七种颜色组成的弧形光带，即彩虹。这一现象需阳光、水滴及特定视角共同作用。",
+      "passed": false,
+      "violations": [
+        "长度 124 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0002",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么会有四季变化",
+      "topic_domain": "science",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "问：请介绍为什么会有四季变化。答：（请作答）\n字数？80~100。",
+      "response": "四季变化主要由地球自转轴倾斜（约23.5度）及公转共同导致。当地球绕太阳公转时，不同地区在不同时间接收到的太阳辐射量和日照角度差异显著。例如，北半球夏季时，其倾斜方向朝向太阳，日照时间长、辐射强，形成高温；冬季则相反。春分和秋分时，太阳直射赤道，昼夜平分，温度适中，形成春秋两季。这种周期性变化导致了四季更替。",
+      "passed": false,
+      "violations": [
+        "长度 155 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0003",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "植物如何进行光合作用",
+      "topic_domain": "science",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "问：请介绍植物如何进行光合作用。答：（请作答）\n问：字数多少？答：80~100。",
+      "response": "植物通过叶绿体进行光合作用，利用光能将水和二氧化碳转化为葡萄糖与氧气。叶绿素吸收光能，驱动水的分解和二氧化碳的固定，最终生成有机物并释放氧气。这一过程分为光反应和暗反应，前者产生ATP和NADPH，后者利用这些能量合成葡萄糖。",
+      "passed": false,
+      "violations": [
+        "长度 113 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0004",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "郑和下西洋的目的",
+      "topic_domain": "history",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "问：请介绍郑和下西洋的目的。答：（请作答）\n问：字数多少？答：80~100。",
+      "response": "郑和下西洋的主要目的是宣扬明朝国威，加强与海外诸国的联系，促进经济文化交流，并建立朝贡体系。同时，通过航海活动展示国家实力，巩固统治合法性。此外，也有学者认为可能包含寻找建文帝的意图，但此说存疑。整体上，其航海活动以和平交往和互利共赢为核心。",
+      "passed": false,
+      "violations": [
+        "长度 121 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0005",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么早餐很重要",
+      "topic_domain": "food",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "问：请介绍为什么早餐很重要。答：（请作答）\n字数？80~100。",
+      "response": "早餐是启动一天代谢的关键，能为身体提供能量，维持血糖稳定，增强专注力与记忆力。规律吃早餐有助于控制体重，降低慢性病风险，同时促进肠道健康。它还能改善情绪，提升工作效率，是维持健康生活方式的重要基础。",
+      "passed": true,
+      "violations": []
+    },
+    {
+      "id": "test_T14_0006",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么推荐算法这么准",
+      "topic_domain": "technology",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "问：请介绍为什么推荐算法这么准。答：（请作答）\n问：字数多少？答：80~100。",
+      "response": "推荐算法精准源于多维度数据融合与智能建模。通过分析用户行为（点击、评分、浏览）、物品属性及社交关系，结合协同过滤、深度学习等技术，挖掘潜在偏好。实时反馈机制持续优化模型，同时利用冷启动策略（如内容推荐）弥补数据不足。算法不断迭代，精准匹配用户需求，实现个性化推荐。",
+      "passed": false,
+      "violations": [
+        "长度 132 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0007",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "大学生应该培养哪些能力",
+      "topic_domain": "campus",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "解释大学生应该培养哪些能力？（请作答）\n问：字数多少？答：80~100。",
+      "response": "大学生应培养自主学习、实践创新、沟通协作、信息处理、抗压适应等能力，提升综合素质，适应社会需求。学习能力是基础，实践能力增强竞争力，沟通协作促进团队合作，信息处理应对数字化挑战，抗压能力助力成长。这些能力共同构建个人核心竞争力，助力未来职业发展与社会贡献。",
+      "passed": false,
+      "violations": [
+        "长度 128 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0008",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么辣的食物让人上瘾",
+      "topic_domain": "food",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "解释为什么辣的食物让人上瘾？（请作答）\n问：字数多少？答：80~100。",
+      "response": "辣的食物让人上瘾主要因辣椒素刺激口腔神经，引发痛觉信号传递至大脑，促使释放多巴胺，产生愉悦感。这种“痛感-快感”机制使人体形成条件反射，渴望重复体验。同时，辣椒素可促进内啡肽分泌，增强耐受性，进一步强化依赖性。长期食用易导致味觉敏感度变化，形成心理与生理双重依赖。",
+      "passed": false,
+      "violations": [
+        "长度 132 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0009",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "唐朝为什么被称为盛世",
+      "topic_domain": "history",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "问：请介绍唐朝为什么被称为盛世。答：（请作答）\n字数？80~100。",
+      "response": "唐朝被称为盛世，主要因其政治清明、经济繁荣、文化昌盛与开放包容。唐太宗开创“贞观之治”，唐玄宗时期达到“开元盛世”，国力强盛，疆域辽阔。农业、手工业、商业高度发展，丝绸之路促进中外交流，诗歌、书画、科技成就斐然。民族融合与多元文化共存，形成开放包容的盛世气象，奠定中华文明高峰。",
+      "passed": false,
+      "violations": [
+        "长度 139 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0010",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "如何撰写周报",
+      "topic_domain": "workplace",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "解释如何撰写周报？（请作答）\n问：字数多少？答：80~100。",
+      "response": "撰写周报需简明扼要，分四步：1. **总结工作内容**，列出本周主要任务及完成情况；2. **突出成果与问题**，用数据或案例说明进展，简述遇到的困难及解决措施；3. **规划下周重点**，明确目标与行动项；4. **语言精炼**，避免冗长，用条目式表达提升可读性。控制在80-100字内，确保信息清晰、重点突出。",
+      "passed": false,
+      "violations": [
+        "长度 157 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0011",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么会有四季变化",
+      "topic_domain": "science",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "问：请介绍为什么会有四季变化。答：（请作答）\n字数？80~100。",
+      "response": "四季变化主要由地球自转轴倾斜（约23.5度）及公转轨道共同作用形成。地球绕太阳公转时，倾斜轴方向保持不变，导致不同地区在不同时间接收到的太阳辐射量差异。当北半球倾向太阳时为夏季，远离时为冬季，而南半球则相反。日照时间与强度的周期性变化，最终形成春、夏、秋、冬四季更替。",
+      "passed": false,
+      "violations": [
+        "长度 134 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0012",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "电子游戏的利与弊",
+      "topic_domain": "entertainment",
+      "difficulty": "simple",
+      "constraints": {
+        "length": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "prompt": "问：请介绍电子游戏的利与弊。答：（请作答）\n问：字数多少？答：80~100。",
+      "response": "电子游戏利与弊并存。其益处包括提升反应力、策略思维及社交互动，部分教育类游戏还能辅助学习。但过度沉迷易导致视力下降、睡眠障碍，甚至影响学业与人际关系。此外，部分游戏内容可能引发暴力倾向。因此，适度游戏、合理时间管理是关键。",
+      "passed": false,
+      "violations": [
+        "长度 111 不在 [80, 100] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0013",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "印刷术对欧洲的影响",
+      "topic_domain": "history",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "问：请介绍印刷术对欧洲的影响。答：（请作答）\n问：字数多少？答：100~150。\n问：分几段？答：3段，每段2句。",
+      "response": "印刷术对欧洲的影响深远。它加速了知识传播，推动了文艺复兴和科学革命，使古典著作和新思想得以广泛流传。宗教改革中，马丁·路德利用印刷术传播《九十五条论纲》，挑战教会权威，促进了思想解放。\n\n印刷术推动了语言标准化，催生了民族语言文学，如法语、德语等，促进了文化统一。同时，书籍普及提升了识字率，为近代教育体系奠定基础，加速了社会变革。",
+      "passed": false,
+      "violations": [
+        "长度 166 不在 [100, 150] 范围内",
+        "段落数 2 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T14_0016",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "咖啡因对人体的影响",
+      "topic_domain": "food",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "问：请介绍咖啡因对人体的影响。答：（请作答）\n问：字数多少？答：60~80。\n问：分几段？答：3段，每段2句。",
+      "response": "咖啡因通过刺激中枢神经系统提升警觉性，但过量可能引发焦虑或失眠。它可加快心率与血压，长期摄入或增加心血管负担。适量摄入有助于代谢脂肪，但空腹饮用易导致胃部不适。",
+      "passed": false,
+      "violations": [
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T14_0017",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么要垃圾分类",
+      "topic_domain": "daily_life",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "解释为什么要垃圾分类？（请作答）\n问：字数多少？答：100~150。\n段数？3。句/段？2。",
+      "response": "垃圾分类是资源再利用的关键。通过分类可回收物、有害垃圾等，减少资源浪费，提升再生利用率。  \n它能有效降低环境污染，减少填埋和焚烧带来的生态破坏，保护土壤和水源安全。  \n推动垃圾分类是提升公民环保意识的重要途径，助力构建可持续发展的社会体系。",
+      "passed": false,
+      "violations": [
+        "第 2 段句数 1 不等于 2",
+        "第 3 段句数 1 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T14_0019",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "咖啡因对人体的影响",
+      "topic_domain": "food",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "问：请介绍咖啡因对人体的影响。答：（请作答）\n问：字数多少？答：100~150。\n问：分几段？答：3段，每段2句。",
+      "response": "咖啡因通过刺激中枢神经系统，能短暂提升警觉性与专注力，但过量可能引发焦虑、失眠或心悸。其利尿作用可能影响水分平衡，长期依赖易导致耐受性增强及戒断反应。适量摄入（如每日300毫克内）可改善运动表现，但过量可能诱发心律失常或消化不良。建议根据个人体质调整摄入量，避免空腹饮用以减少胃部刺激。",
+      "passed": false,
+      "violations": [
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T14_0022",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么早餐很重要",
+      "topic_domain": "food",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "解释为什么早餐很重要？（请作答）\n字数？60~80。\n问：分几段？答：3段，每段2句。",
+      "response": "早餐为身体提供启动能量，帮助维持血糖稳定。营养均衡的早餐能增强专注力，提升学习与工作效率。长期规律吃早餐有助于预防慢性病，促进新陈代谢健康。",
+      "passed": false,
+      "violations": [
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T14_0024",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么短视频这么流行",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "问：请介绍为什么短视频这么流行。答：（请作答）\n问：字数多少？答：100~150。\n问：分几段？答：3段，每段2句。",
+      "response": "短视频流行因其内容形式契合现代人碎片化需求，以短平快的节奏传递娱乐、知识等多元信息，满足即时消遣与信息获取的双重需求。技术革新如5G和算法推荐提升了观看流畅度与个性化体验，降低内容获取门槛。社交属性强化了用户互动，点赞、评论、分享等功能形成传播链，推动内容裂变式扩散，进一步巩固其传播优势。",
+      "passed": false,
+      "violations": [
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T14_0026",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "音乐对情绪的影响",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "解释音乐对情绪的影响？（请作答）\n字数？60~80。\n问：分几段？答：3段，每段2句。",
+      "response": "音乐通过节奏与旋律直接影响神经系统，快节奏常激发兴奋感，慢节奏则引发平静。不同音色与和声能唤起特定情感记忆，如忧伤旋律易引发共鸣。音乐还可作为情绪调节工具，帮助释放压力或增强积极体验。",
+      "passed": false,
+      "violations": [
+        "长度 92 不在 [60, 80] 范围内",
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T14_0027",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "唐朝为什么被称为盛世",
+      "topic_domain": "history",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "问：请介绍唐朝为什么被称为盛世。答：（请作答）\n字数？100~150。\n段数？3。句/段？2。",
+      "response": "唐朝被称为盛世，因经济繁荣、政治清明与文化昌盛。农业技术革新与手工业发展推动商业繁荣，丝绸之路促进中外贸易。政治上，唐太宗以“贞观之治”奠定盛世根基，科举制度完善选拔人才。文化方面，诗歌达到黄金时代，李白、杜甫等文豪辈出，佛教与道教并行发展。社会开放包容，多元文化交融，形成强盛国力与文明影响力。",
+      "passed": false,
+      "violations": [
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T14_0028",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么人们喜欢看电影",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "问：请介绍为什么人们喜欢看电影。答：（请作答）\n字数？100~150。\n段数？3。句/段？2。",
+      "response": "人们喜欢看电影，因其能提供沉浸式的娱乐体验。影片通过画面与音效，让人暂时逃离现实压力，获得情感共鸣。  \n电影常以故事传递价值观，引发思考，满足人们对未知世界的好奇与探索欲。  \n此外，观影成为社交纽带，与他人分享感受，增强情感联结，丰富精神生活。",
+      "passed": false,
+      "violations": [
+        "第 2 段句数 1 不等于 2",
+        "第 3 段句数 1 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T14_0029",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么会有四季变化",
+      "topic_domain": "science",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "解释为什么会有四季变化？（请作答）\n问：字数多少？答：60~80。\n段数？3。句/段？2。",
+      "response": "四季变化由地球公转与地轴倾斜共同导致。地球绕太阳公转时，地轴始终倾斜约23.5度。不同季节，太阳直射点在南北回归线间移动。北半球夏季时，太阳直射北回归线，白昼长、温度高；冬季则直射南回归线，白昼短、温度低。这种周期性变化形成四季更替。",
+      "passed": false,
+      "violations": [
+        "长度 117 不在 [60, 80] 范围内",
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T14_0030",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "音乐对情绪的影响",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 60,
+          "max": 80
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "解释音乐对情绪的影响？（请作答）\n字数？60~80。\n段数？3。句/段？2。",
+      "response": "音乐通过节奏与旋律影响神经系统，激发情绪共鸣。快节奏音乐提升兴奋感，慢节奏舒缓焦虑。不同曲风引发特定情绪，如古典乐带来平静，摇滚乐增强活力。音乐成为情绪调节工具，帮助释放压力或强化积极体验。",
+      "passed": false,
+      "violations": [
+        "长度 95 不在 [60, 80] 范围内",
+        "段落数 1 不等于 3"
+      ]
+    },
+    {
+      "id": "test_T14_0032",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "音乐对情绪的影响",
+      "topic_domain": "entertainment",
+      "difficulty": "medium",
+      "constraints": {
+        "length": {
+          "min": 100,
+          "max": 150
+        },
+        "paragraph": {
+          "num_paragraphs": 3,
+          "sentences_per_paragraph": 2
+        }
+      },
+      "prompt": "问：请介绍音乐对情绪的影响。答：（请作答）\n问：字数多少？答：100~150。\n问：分几段？答：3段，每段2句。",
+      "response": "音乐通过旋律、节奏和和声直接影响情绪。快节奏音乐常激发兴奋感，慢节奏则易引发平静或忧郁。不同音调和乐器组合能激活大脑特定区域，调节神经递质分泌。  \n音乐与个人记忆紧密关联，熟悉旋律可唤醒特定情感体验，如怀旧或愉悦。这种联结使音乐成为情绪表达和共鸣的重要媒介。  \n在心理治疗中，音乐被用于缓解焦虑、抑郁等情绪障碍。通过引导式聆听或创作，音乐帮助个体释放情绪、重建心理平衡。",
+      "passed": false,
+      "violations": [
+        "长度 187 不在 [100, 150] 范围内",
+        "第 1 段句数 3 不等于 2"
+      ]
+    },
+    {
+      "id": "test_T14_0034",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "远程办公的优势与挑战",
+      "topic_domain": "workplace",
+      "difficulty": "hard",
+      "constraints": {
+        "length": {
+          "min": 50,
+          "max": 70
+        },
+        "paragraph": {
+          "num_paragraphs": 4,
+          "sentences_per_paragraph": 3
+        },
+        "forbidden_word": "因此"
+      },
+      "prompt": "解释远程办公的优势与挑战？（请作答）\n问：字数多少？答：50~70。\n问：分几段？答：4段，每段3句。\n禁词？“因、此”。",
+      "response": "远程办公提升灵活性，员工可自主安排时间。减少通勤压力，节省交通成本。提高专注度，减少办公室干扰。\n\n沟通效率可能下降，依赖线上工具易产生误解。团队协作需更强组织能力，信息传递易延误。技术故障影响工作进度，需备用方案。\n\n工作与生活界限模糊，易导致过度劳累。缺乏面对面交流，影响团队凝聚力。长期隔离可能引发心理压力，需主动调节。\n\n企业需优化管理方式，平衡效率与员工福祉。技术保障与培训是关键支撑。灵活模式需持续探索适应性方案。",
+      "passed": false,
+      "violations": [
+        "长度 213 不在 [50, 70] 范围内"
+      ]
+    },
+    {
+      "id": "test_T14_0035",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么推荐算法这么准",
+      "topic_domain": "technology",
+      "difficulty": "hard",
+      "constraints": {
+        "length": {
+          "min": 50,
+          "max": 70
+        },
+        "paragraph": {
+          "num_paragraphs": 4,
+          "sentences_per_paragraph": 3
+        },
+        "forbidden_word": "因此"
+      },
+      "prompt": "问：请介绍为什么推荐算法这么准。答：（请作答）\n字数？50~70。\n段数？4。句/段？3。\n问：有什么词不能用？答：“因、此”。",
+      "response": "问：请介绍为什么推荐算法这么准。答：海量数据支撑精准分析，用户行为轨迹被深度挖掘。算法捕捉偏好变化，预测需求更贴合实际。多维度标签构建用户画像，提升匹配效率。机器学习模型持续优化，动态调整推荐策略。协同过滤与深度学习结合，",
+      "passed": false,
+      "violations": [
+        "长度 111 不在 [50, 70] 范围内",
+        "段落数 1 不等于 4"
+      ]
+    },
+    {
+      "id": "test_T14_0039",
+      "template_id": "T14",
+      "split": "test",
+      "style": "dialogic",
+      "topic": "为什么短视频这么流行",
+      "topic_domain": "entertainment",
+      "difficulty": "hard",
+      "constraints": {
+        "length": {
+          "min": 50,
+          "max": 70
+        },
+        "paragraph": {
+          "num_paragraphs": 4,
+          "sentences_per_paragraph": 3
+        },
+        "forbidden_word": "进而"
+      },
+      "prompt": "解释为什么短视频这么流行？（请作答）\n字数？50~70。\n段数？4。句/段？3。\n问：有什么词不能用？答：“进、而”。",
+      "response": "短视频流行因内容短小精悍，信息密度高，吸引注意力。算法推荐精准推送，提升用户粘性。社交属性强，用户易互动分享。碎片化时间利用高效，契合现代生活节奏。",
+      "passed": false,
+      "violations": [
+        "长度 74 不在 [50, 70] 范围内",
+        "段落数 1 不等于 4"
+      ]
+    }
+  ]
+}
