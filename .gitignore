@@ -7,3 +7,23 @@ data/rejected.jsonl
 data/stats.json
 !data/topics.json
 .ipynb_checkpoints/
+
+# ===== 模型与训练产物 =====
+lora_adapter/
+results/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# ===== 数据集与评估结果 =====
+# 忽略生成的 jsonl 文件（保留 topics.json）
+data/*.jsonl
+data/stats.json
+data/eval_results*.json
+data/_runs/
+
+# ===== 缓存 =====
+.cache/
+__pycache__/
+*.pyc
