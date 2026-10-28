@@ -5,13 +5,13 @@ Generator 和 Validator 都从这里读取，确保标准一致。
 
 CONSTRAINT_SPEC = {
     "length": {
-        "loose": [{"min": 80, "max": 100}],
+        "loose": [{"min": 70, "max": 85}],
 
-        "medium": [{"min": 60, "max": 80},
-                   {"min": 100, "max": 150}],
+        "medium": [{"min": 50, "max": 70},
+                   {"min": 85, "max": 130}],
 
-        "strict": [{"min": 50, "max": 70},
-                 {"min": 150, "max": 200}]
+        "strict": [{"min": 40, "max": 60},
+                 {"min": 130, "max": 170}]
     },
 
     "paragraph": {

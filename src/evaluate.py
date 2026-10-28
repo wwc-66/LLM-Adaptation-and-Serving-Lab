@@ -4,6 +4,7 @@
 
 import json
 import os
+import re
 from collections import Counter
 
 import torch
@@ -20,6 +21,28 @@ def clean_response(response: str) -> str:
     if "</think>" in response:
         # 取 </think> 之后的文本
         response = response.split("</think>")[-1].strip()
+    return response
+
+def enforce_length_constraint(response: str, constraints: dict) -> str:
+    """
+    工业级后处理：如果模型回答略微超出字数上限（在容忍阈值内），
+    则自动按句号截断，或者进行压缩。
+    """
+    if "length" not in constraints:
+        return response
+    
+    max_len = constraints["length"]["max"]
+    # 如果没超，或者超得太多（超过20%，说明完全跑题，不救），直接返回
+    if len(response) <= max_len or len(response) > max_len * 1.2:
+        return response
+        
+    # 在 max_len 范围内，寻找最后一个句号（。！？）
+    truncated = response[:max_len]
+    last_punctuation = max(truncated.rfind("。"), truncated.rfind("！"), truncated.rfind("？"))
+    
+    if last_punctuation > max_len * 0.8: # 确保截断后不会少于下限的80%
+        return truncated[:last_punctuation + 1]
+        
     return response
 
 def model_generate(
@@ -131,6 +154,7 @@ def evaluate_model(
         # 逐条校验
         for sample, response in zip(batch, responses):
             response = clean_response(response)
+            response = enforce_length_constraint(response, sample["constraints"])
             passed, violations = validate_response(response, sample["constraints"])
             
             sample_copy = sample.copy()

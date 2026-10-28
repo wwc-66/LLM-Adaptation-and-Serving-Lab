@@ -76,6 +76,13 @@ def train():
     # 4. 加载并处理数据
     print("1.正在处理训练数据")
     dataset = load_dataset("json", data_files="data/train.jsonl", split="train")
+    def filter_markdown(example):
+        if "**" in example["response"] or "###" in example["response"]:
+            return False
+        return True
+
+    dataset = dataset.filter(filter_markdown)
+    print(f"清洗后训练集大小: {len(dataset)}")
 
     def process_func(examples):
         results = {"input_ids": [], "labels": [], "attention_mask": []}
@@ -99,7 +106,7 @@ def train():
         gradient_accumulation_steps=2,         # 梯度累积（等效 batch_size=8）
         learning_rate=2e-4,                    # LoRA 常用学习率
         logging_steps=10,
-        num_train_epochs=3,
+        num_train_epochs=8,
         save_strategy="epoch",
         optim="paged_adamw_8bit",              # QLoRA 专用优化器，防止 OOM
         bf16=True,                             # 5090 完美支持 bf16
